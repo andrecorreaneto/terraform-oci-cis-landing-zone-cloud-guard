@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This example shows how to enable and manage Cloud Guard service resources in Oracle Cloud Infrastructure according to CIS OCI Benchmark requirement.
+This example shows how to enable and manage Cloud Guard service resources in Oracle Cloud Infrastructure according to CIS OCI Foundations Benchmark recommendations.
 
-The following resources are created in this example:
+The underlying policy module 
 
 - Cloud Guard service is enabled.
 - One Cloud Guard target resource at the root compartment.
@@ -64,8 +64,7 @@ module "cislz_cloud_guard" {
   target_resource_id = var.tenancy_id
   reporting_region   = var.home_region
   name_prefix        = "cislz"
-}
-
+} 
 ```
 
 Then execute the example using the usual Terraform workflow:
