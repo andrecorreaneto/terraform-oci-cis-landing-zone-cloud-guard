@@ -1,8 +1,8 @@
-# OCI Cloud Guard Module Example - CIS Landing Zone
+# OCI Cloud Guard Module Example - CIS Landing Zone Quick Start
 
 ## Introduction
 
-This example shows how to enable and manage Cloud Guard service resources in Oracle Cloud Infrastructure according to CIS OCI Foundations Benchmark recommendations.
+This example shows how to enable and manage Cloud Guard service resources in Oracle Cloud Infrastructure as in [CIS Landing Zone Quick Start](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart).
 
 The underlying policy module 
 
@@ -26,7 +26,7 @@ Here's how these resources appear in OCI Console:
 ![Cloud Guard Responder Recipe](images/cloud-guard-responder-recipe.PNG)
 
 ## Using this example
-* Prepare one variable file named `terraform.tfvars` with the required IAM information. The contents of `terraform.tfvars` should look something like the following (or copy and re-use the contents of `terraform.tfvars.template`:
+1. Prepare one variable file named *terraform.tfvars* with the required information for authenticating to OCI. The contents of *terraform.tfvars* should look something like the following (or copy and re-use the contents of *terraform.tfvars.template*):
 
 ```
 ### TENANCY DETAILS
@@ -50,7 +50,7 @@ private_key_password=""
 home_region="<your tenancy home region>"
 ```
 
-Check the provided main.tf file. It calls the underlying tags module for resource management.
+2. Check the provided *main.tf* file. It calls the underlying tags module for resource management.
 
 `main.tf`:
 
@@ -67,7 +67,7 @@ module "cislz_cloud_guard" {
 } 
 ```
 
-Then execute the example using the usual Terraform workflow:
+3. Then execute the example using the usual Terraform workflow:
 
 ```
 $ terraform init
