@@ -10,7 +10,7 @@ Check [module specification](./SPEC.md) for a full description of module require
 
 **Caution**: Once Cloud Guard service is enabled by this module by setting *enable_cloud_guard* variable to true, setting the variable to false would make Terraform destroy all targets and recipes, wiping out all customizations and Cloud Guard captured data. For avoiding such destructive updates (intentional or not), make sure to check the Terraform plan output, where Terraform would inform you about any changes to be made in the apply phase.
 
-Check the examples folder for how to use this module. Specifically, [cis-landing-zone-quickstart](./examples/cis-landing-zone-quickstart/README.md) for enabling Cloud Guard as in [CIS OCI Landing Zone Quickstart](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart).
+Check the examples folder for how to use this module. Specifically, [cis-landing-zone-quickstart](./examples/cis-landing-zone-quickstart/README.md) for enabling Cloud Guard as in [CIS OCI Landing Zone Quick Start](https://github.com/oracle-quickstart/oci-cis-landingzone-quickstart).
 
 ## Contributing
 See [CONTRIBUTING.md](./CONTRIBUTING.md).
