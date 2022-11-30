@@ -74,16 +74,24 @@ resource "oci_cloud_guard_target" "this" {
   defined_tags         = var.defined_tags
   freeform_tags        = var.freeform_tags
   target_detector_recipes {
+    detector_recipe_id = var.enable_cloned_recipes ? oci_cloud_guard_detector_recipe.threat_cloned[0].id : data.oci_cloud_guard_detector_recipes.threat.detector_recipe_collection[0].items[0].id
+  }
+  target_detector_recipes {
     detector_recipe_id = var.enable_cloned_recipes ? oci_cloud_guard_detector_recipe.configuration_cloned[0].id : data.oci_cloud_guard_detector_recipes.configuration.detector_recipe_collection[0].items[0].id
   }
   target_detector_recipes {
     detector_recipe_id = var.enable_cloned_recipes ? oci_cloud_guard_detector_recipe.activity_cloned[0].id : data.oci_cloud_guard_detector_recipes.activity.detector_recipe_collection[0].items[0].id
   }
-  target_detector_recipes {
-    detector_recipe_id = var.enable_cloned_recipes ? oci_cloud_guard_detector_recipe.threat_cloned[0].id : data.oci_cloud_guard_detector_recipes.threat.detector_recipe_collection[0].items[0].id
-  }
   target_responder_recipes {
     responder_recipe_id = var.enable_cloned_recipes ? oci_cloud_guard_responder_recipe.responder_cloned[0].id : data.oci_cloud_guard_responder_recipes.responder.responder_recipe_collection[0].items[0].id
+  }
+
+  dynamic "target_detector_recipes" {
+    for_each = length(data.oci_cloud_guard_detector_recipes.compartment_detector_recipes.detector_recipe_collection) > 0 ? data.oci_cloud_guard_detector_recipes.compartment_detector_recipes.detector_recipe_collection[0].items : []
+    iterator = recipe
+    content {
+      detector_recipe_id = recipe.value["id"]
+    }  
   }
 
 }
