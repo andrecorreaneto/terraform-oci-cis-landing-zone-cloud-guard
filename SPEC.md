@@ -31,22 +31,22 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_activity_detector_recipe_name"></a> [activity\_detector\_recipe\_name](#input\_activity\_detector\_recipe\_name) | The activity detector recipe name. A provided value overrides the auto-generated name. | `string` | `null` | no |
+| <a name="input_activity_detector_recipe_name"></a> [activity\_detector\_recipe\_name](#input\_activity\_detector\_recipe\_name) | The cloned activity detector recipe name. A provided value overrides the auto-generated name. | `string` | `null` | no |
 | <a name="input_compartment_id"></a> [compartment\_id](#input\_compartment\_id) | The compartment ocid where the Cloud Guard target and the cloned recipes are created. | `string` | n/a | yes |
-| <a name="input_configuration_detector_recipe_name"></a> [configuration\_detector\_recipe\_name](#input\_configuration\_detector\_recipe\_name) | The configuration detector recipe name. A provided value overrides the auto-generated name. | `string` | `null` | no |
+| <a name="input_configuration_detector_recipe_name"></a> [configuration\_detector\_recipe\_name](#input\_configuration\_detector\_recipe\_name) | The cloned configuration detector recipe name. A provided value overrides the auto-generated name. | `string` | `null` | no |
 | <a name="input_defined_tags"></a> [defined\_tags](#input\_defined\_tags) | Map of key-value pairs of defined tags for Cloud Guard managed resources. | `map(string)` | `null` | no |
 | <a name="input_enable_cloned_recipes"></a> [enable\_cloned\_recipes](#input\_enable\_cloned\_recipes) | Whether cloned recipes are created and attached to the designated target. Existing managed targets that use the Oracle-managed recipes will have all open problems moved to 'resolved' state. For more details, see https://docs.oracle.com/en-us/iaas/cloud-guard/using/problems-page.htm#problems-page__sect_prob_lifecycle. | `bool` | `false` | no |
 | <a name="input_enable_cloud_guard"></a> [enable\_cloud\_guard](#input\_enable\_cloud\_guard) | Whether Cloud Guard is to be enabled. | `bool` | n/a | yes |
 | <a name="input_freeform_tags"></a> [freeform\_tags](#input\_freeform\_tags) | Map of key-value pairs of freeform tags for Cloud Guard managed resources. | `map(string)` | `null` | no |
 | <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | A string used as a prefix in the auto-generated resource names. | `string` | n/a | yes |
 | <a name="input_reporting_region"></a> [reporting\_region](#input\_reporting\_region) | Cloud Guard reporting region. | `string` | n/a | yes |
-| <a name="input_responder_recipe_name"></a> [responder\_recipe\_name](#input\_responder\_recipe\_name) | The responder recipe name. A provided value overrides the auto-generated name. | `string` | `null` | no |
+| <a name="input_responder_recipe_name"></a> [responder\_recipe\_name](#input\_responder\_recipe\_name) | The cloned responder recipe name. A provided value overrides the auto-generated name. | `string` | `null` | no |
 | <a name="input_self_manage_resources"></a> [self\_manage\_resources](#input\_self\_manage\_resources) | Whether Oracle managed resources are created by customers. | `bool` | `false` | no |
 | <a name="input_target_resource_id"></a> [target\_resource\_id](#input\_target\_resource\_id) | Resource ocid that Cloud Guard monitors. If a compartment ocid is provided, Cloud Guard monitors the compartment and all its subcompartments. | `string` | n/a | yes |
 | <a name="input_target_resource_name"></a> [target\_resource\_name](#input\_target\_resource\_name) | Cloud Guard target name. A provided value overrides the auto-generated name. | `string` | `null` | no |
 | <a name="input_target_resource_type"></a> [target\_resource\_type](#input\_target\_resource\_type) | Resource types that Cloud Guard is able to monitor. | `string` | `"COMPARTMENT"` | no |
 | <a name="input_tenancy_id"></a> [tenancy\_id](#input\_tenancy\_id) | The tenancy ocid, where Cloud Service is enabled. | `string` | n/a | yes |
-| <a name="input_threat_detector_recipe_name"></a> [threat\_detector\_recipe\_name](#input\_threat\_detector\_recipe\_name) | The threat detector recipe name. A provided value overrides the auto-generated name. | `string` | `null` | no |
+| <a name="input_threat_detector_recipe_name"></a> [threat\_detector\_recipe\_name](#input\_threat\_detector\_recipe\_name) | The cloned threat detector recipe name. A provided value overrides the auto-generated name. | `string` | `null` | no |
 
 ## Outputs
 

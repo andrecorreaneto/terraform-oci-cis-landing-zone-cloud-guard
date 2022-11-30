@@ -60,25 +60,25 @@ variable "enable_cloned_recipes" {
 }
 
 variable "configuration_detector_recipe_name" {
-  description = "The configuration detector recipe name. A provided value overrides the auto-generated name."
+  description = "The cloned configuration detector recipe name. A provided value overrides the auto-generated name."
   type        = string
   default     = null
 }
 
 variable "activity_detector_recipe_name" {
-  description = "The activity detector recipe name. A provided value overrides the auto-generated name."
+  description = "The cloned activity detector recipe name. A provided value overrides the auto-generated name."
   type        = string
   default     = null
 }
 
 variable "threat_detector_recipe_name" {
-  description = "The threat detector recipe name. A provided value overrides the auto-generated name."
+  description = "The cloned threat detector recipe name. A provided value overrides the auto-generated name."
   type        = string
   default     = null
 }
 
 variable "responder_recipe_name" {
-  description = "The responder recipe name. A provided value overrides the auto-generated name."
+  description = "The cloned responder recipe name. A provided value overrides the auto-generated name."
   type        = string
   default     = null
 }
