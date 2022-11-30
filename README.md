@@ -12,7 +12,7 @@ Notice that switching back and forth between Oracle managed and cloned detector 
 - Activity problem: existing problem will re-open when the activity happens again.
 - Threat detector: existing problem will re-open.
 
-For more details on problem lifecycle, see [documentation](https://docs.oracle.com/en-us/iaas/cloud-guard/using/problems-page.htm#problems-page__sect_prob_lifecycle). 
+For more details on Cloud Guard problems lifecycle, see [documentation](https://docs.oracle.com/en-us/iaas/cloud-guard/using/problems-page.htm#problems-page__sect_prob_lifecycle). 
 
 **Caution**: Cloud Guard service is enabled by this module by setting *enable_cloud_guard* variable to true. Subsequently setting the variable to false would make Terraform delete the managed target and any managed cloned recipes. For avoiding such destructive updates (intentional or not), make sure to check the Terraform plan output, where Terraform would inform you about any changes to be made in the apply phase.
 
