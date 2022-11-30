@@ -14,7 +14,7 @@ locals {
   default_responder_recipe_name = "responder-recipe"
   responder_recipe_name = var.responder_recipe_name != null ? var.responder_recipe_name : "${var.name_prefix}-${local.default_responder_recipe_name}"
 
-  default_target_resource_name = var.tenancy_id == var.target_resource_id ? "root-${lower(var.target_resource_type)}-cloud-guard-target" : "${lower(var.target_resource_type)}-cloud-guard-target"
+  default_target_resource_name = var.tenancy_id == var.target_resource_id ? "cloud-guard-root-target" : "cloud-guard-target"
   target_resource_name = var.target_resource_name != null ? var.target_resource_name : "${var.name_prefix}-${local.default_target_resource_name}"
 }
 
