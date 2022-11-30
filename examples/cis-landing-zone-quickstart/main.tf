@@ -4,10 +4,11 @@
 module "cislz_cloud_guard" {
   source = "../../"
 
-  enable_cloud_guard = true
-  tenancy_id         = var.tenancy_id
-  compartment_id     = var.tenancy_id
-  target_resource_id = var.tenancy_id
-  reporting_region   = var.home_region
-  name_prefix        = "cislz"
+  enable_cloud_guard    = true
+  tenancy_id            = var.tenancy_id
+  compartment_id        = var.tenancy_id
+  target_resource_id    = var.tenancy_id
+  reporting_region      = var.home_region
+  name_prefix           = "cislz"
+  enable_cloned_recipes = false
 }  

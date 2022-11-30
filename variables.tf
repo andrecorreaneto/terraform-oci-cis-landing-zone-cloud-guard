@@ -53,6 +53,12 @@ variable "target_resource_type" {
   }
 }
 
+variable "enable_cloned_recipes" {
+  description = "Whether cloned recipes are created and attached to the designated target. Existing managed targets that use the Oracle-managed recipes will have all open problems moved to 'resolved' state. For more details, see https://docs.oracle.com/en-us/iaas/cloud-guard/using/problems-page.htm#problems-page__sect_prob_lifecycle."
+  type = bool
+  default = false
+}
+
 variable "configuration_detector_recipe_name" {
   description = "The configuration detector recipe name. A provided value overrides the auto-generated name."
   type        = string

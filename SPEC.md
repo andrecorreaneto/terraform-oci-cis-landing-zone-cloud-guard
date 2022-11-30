@@ -35,6 +35,7 @@ No modules.
 | <a name="input_compartment_id"></a> [compartment\_id](#input\_compartment\_id) | The compartment ocid where the Cloud Guard target and the cloned recipes are created. | `string` | n/a | yes |
 | <a name="input_configuration_detector_recipe_name"></a> [configuration\_detector\_recipe\_name](#input\_configuration\_detector\_recipe\_name) | The configuration detector recipe name. A provided value overrides the auto-generated name. | `string` | `null` | no |
 | <a name="input_defined_tags"></a> [defined\_tags](#input\_defined\_tags) | Map of key-value pairs of defined tags for Cloud Guard managed resources. | `map(string)` | `null` | no |
+| <a name="input_enable_cloned_recipes"></a> [enable\_cloned\_recipes](#input\_enable\_cloned\_recipes) | Whether cloned recipes are created and attached to the designated target. Existing managed targets that use the Oracle-managed recipes will have all open problems moved to 'resolved' state. For more details, see https://docs.oracle.com/en-us/iaas/cloud-guard/using/problems-page.htm#problems-page__sect_prob_lifecycle. | `bool` | `false` | no |
 | <a name="input_enable_cloud_guard"></a> [enable\_cloud\_guard](#input\_enable\_cloud\_guard) | Whether Cloud Guard is to be enabled. | `bool` | n/a | yes |
 | <a name="input_freeform_tags"></a> [freeform\_tags](#input\_freeform\_tags) | Map of key-value pairs of freeform tags for Cloud Guard managed resources. | `map(string)` | `null` | no |
 | <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | A string used as a prefix in the auto-generated resource names. | `string` | n/a | yes |
@@ -51,8 +52,8 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_activity_detector_recipe"></a> [activity\_detector\_recipe](#output\_activity\_detector\_recipe) | n/a |
-| <a name="output_configuration_detector_recipe"></a> [configuration\_detector\_recipe](#output\_configuration\_detector\_recipe) | n/a |
-| <a name="output_responder_recipe"></a> [responder\_recipe](#output\_responder\_recipe) | n/a |
+| <a name="output_cloned_activity_detector_recipe"></a> [cloned\_activity\_detector\_recipe](#output\_cloned\_activity\_detector\_recipe) | n/a |
+| <a name="output_cloned_configuration_detector_recipe"></a> [cloned\_configuration\_detector\_recipe](#output\_cloned\_configuration\_detector\_recipe) | n/a |
+| <a name="output_cloned_responder_recipe"></a> [cloned\_responder\_recipe](#output\_cloned\_responder\_recipe) | n/a |
+| <a name="output_cloned_threat_detector_recipe"></a> [cloned\_threat\_detector\_recipe](#output\_cloned\_threat\_detector\_recipe) | n/a |
 | <a name="output_target"></a> [target](#output\_target) | n/a |
-| <a name="output_threat_detector_recipe"></a> [threat\_detector\_recipe](#output\_threat\_detector\_recipe) | n/a |

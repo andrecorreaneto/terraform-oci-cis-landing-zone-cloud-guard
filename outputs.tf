@@ -1,22 +1,22 @@
 # Copyright (c) 2022 Oracle and/or its affiliates.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
 
-output "configuration_detector_recipe" {
-  value = oci_cloud_guard_detector_recipe.configuration_cloned
+output "cloned_configuration_detector_recipe" {
+  value = length(oci_cloud_guard_detector_recipe.configuration_cloned) > 0 ? oci_cloud_guard_detector_recipe.configuration_cloned[0] : null
 }
 
-output "activity_detector_recipe" {
-  value = oci_cloud_guard_detector_recipe.activity_cloned
+output "cloned_activity_detector_recipe" {
+  value = length(oci_cloud_guard_detector_recipe.activity_cloned) > 0 ? oci_cloud_guard_detector_recipe.activity_cloned[0] : null
 }
 
-output "threat_detector_recipe" {
-  value = oci_cloud_guard_detector_recipe.threat_cloned
+output "cloned_threat_detector_recipe" {
+  value = length(oci_cloud_guard_detector_recipe.threat_cloned) > 0 ? oci_cloud_guard_detector_recipe.threat_cloned[0] : null
 }
 
-output "responder_recipe" {
-  value = oci_cloud_guard_responder_recipe.responder_cloned
+output "cloned_responder_recipe" {
+  value = length(oci_cloud_guard_responder_recipe.responder_cloned) > 0 ? oci_cloud_guard_responder_recipe.responder_cloned[0] : null
 }
 
 output "target" {
-  value = oci_cloud_guard_target.this
+  value = length(oci_cloud_guard_target.this) > 0 ? oci_cloud_guard_target.this[0] : null
 }
