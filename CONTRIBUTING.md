@@ -6,7 +6,7 @@ If you want to submit a pull request to fix a bug or enhance an existing feature
 
 If you have any questions about a possible submission, feel free to open an issue too.
 
-## Contributing to the terraform-oci-iam repository
+## Contributing to this repository
 
 Pull requests can be made under The [Oracle Contributor Agreement (OCA)](https://oca.opensource.oracle.com/).
 
